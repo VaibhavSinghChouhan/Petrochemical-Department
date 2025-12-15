@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maintenance System</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>⚡ Electrical Maintenance System</h1>
+    </header>
+
+    <div class="container">
+
+        <div id="home-page" class="page active">
+            <h2>Select an Option:</h2>
+            <div class="grid-menu">
+                
+                <div class="menu-item" onclick="openPage('login-page')">
+                    <span class="icon">🔐</span>
+                    <strong>Admin Login</strong>
+                </div>
+
+                <div class="menu-item" onclick="openPage('consumer-page')">
+                    <span class="icon">👤</span>
+                    <strong>Consumer Complaint</strong>
+                </div>
+
+                <div class="menu-item" onclick="openPage('staff-page')">
+                    <span class="icon">🛠</span>
+                    <strong>Staff Tasks</strong>
+                </div>
+
+                <div class="menu-item" onclick="openPage('inventory-page')">
+                    <span class="icon">📦</span>
+                    <strong>Inventory</strong>
+                </div>
+
+                <div class="menu-item" onclick="openPage('settings-page')">
+                    <span class="icon">⚙</span>
+                    <strong>Settings</strong>
+                </div>
+
+                <div class="menu-item" onclick="openPage('help-page')">
+                    <span class="icon">❓</span>
+                    <strong>Help & Support</strong>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="login-page" class="page">
+            <button class="back-btn" onclick="openPage('home-page')">← Back</button>
+            <h2>Admin Login</h2>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button onclick="alert('Login Successful!')">Login</button>
+        </div>
+
+        <div id="consumer-page" class="page">
+            <button class="back-btn" onclick="openPage('home-page')">← Back</button>
+            <h2>📝 Report an Issue</h2>
+            <label>Select Problem:</label>
+            <select>
+                <option>Sparking Wire</option>
+                <option>Power Cut</option>
+                <option>Broken Pole</option>
+            </select>
+            <label>Address:</label>
+            <input type="text" placeholder="Enter your address">
+            <button onclick="alert('Complaint Submitted!')">Submit</button>
+        </div>
+
+        <div id="staff-page" class="page">
+            <button class="back-btn" onclick="openPage('home-page')">← Back</button>
+            <h2>📋 Work Orders</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Issue</th>
+                    <th>Priority</th>
+                </tr>
+                <tr>
+                    <td>101</td>
+                    <td>Transformer Fire</td>
+                    <td style="color:red; font-weight:bold;">CRITICAL</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Street Light Off</td>
+                    <td style="color:orange;">Medium</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="inventory-page" class="page">
+            <button class="back-btn" onclick="openPage('home-page')">← Back</button>
+            <h2>📦 Stock Status</h2>
+            <ul>
+                <li>Wires: <strong>500m</strong></li>
+                <li>Fuses: <strong>20 units</strong></li>
+                <li>Poles: <strong>5 units</strong> (Low Stock!)</li>
+            </ul>
+        </div>
+
+        <div id="settings-page" class="page">
+            <button class="back-btn" onclick="openPage('home-page')">← Back</button>
+            <h2>⚙ Settings</h2>
+            <p>
+                <input type="checkbox"> Enable Notifications<br><br>
+                <input type="checkbox"> Dark Mode<br><br>
+                <input type="checkbox"> Auto-Save Data
+            </p>
+            <button>Save Changes</button>
+        </div>
+
+        <div id="help-page" class="page">
+            <button class="back-btn" onclick="openPage('home-page')">← Back</button>
+            <h2>❓ Help Center</h2>
+            <p><strong>Emergency Contact:</strong> 1800-123-456</p>
+            <p><strong>Email Support:</strong> help@energy.com</p>
+            <p>If the app is not working, please refresh the page.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
